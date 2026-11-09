@@ -69,7 +69,7 @@ Only set it when the proxy overwrites that header.
 | `src/lib/team.ts` | Admin invites and removing admins |
 | `src/lib/db.ts` | The SQLite database |
 
-`src/plugins/comments/` is also the comments plugin of WuppyCMS, which copies it from this repository unchanged
+`src/plugins/comments/` is also the comments plugin of WuppyCMS, which copies it from the npm package unchanged
 and only restyles it. So fix and build the comments here.
 
 ```sh
