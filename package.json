@@ -1,9 +1,26 @@
 {
-  "name": "gitupcms-comments",
+  "name": "@gitupcms/comments",
   "version": "0.1.0",
   "description": "Self-hosted comments for any website: one script tag, sign-in with Google or GitHub, moderation and email notifications.",
   "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitupcms/gitupcms-comments.git"
+  },
+  "homepage": "https://github.com/gitupcms/gitupcms-comments",
+  "bin": {
+    "gitupcms-comments": "bin/gitupcms-comments.mjs"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "src",
+    ".env.example"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
     "node": ">=22"
   },
@@ -13,7 +30,8 @@
     "build:widget": "vite build -c src/plugins/comments/widget/vite.config.ts",
     "start": "node dist/server/entry.mjs",
     "check": "astro check",
-    "test": "node --test \"src/**/*.test.ts\""
+    "test": "node --test \"src/**/*.test.ts\"",
+    "prepublishOnly": "pnpm build"
   },
   "dependencies": {
     "@astrojs/compiler-rs": "0.5.2",

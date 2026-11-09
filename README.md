@@ -12,7 +12,13 @@ comments stay in a SQLite file on your server.
 
 ## Run it
 
-Needs Node 22+ and pnpm.
+Needs Node 22+. From npm, in a folder with your `.env` (see `.env.example`; the database goes in `data/`):
+
+```sh
+npx @gitupcms/comments   # HOST and PORT pick the address (default localhost:4321)
+```
+
+Or from source, with pnpm:
 
 ```sh
 cp .env.example .env    # set BETTER_AUTH_URL and BETTER_AUTH_SECRET at least
