@@ -63,12 +63,11 @@ Only set it when the proxy overwrites that header.
 | `src/lib/team.ts` | Admin invites and removing admins |
 | `src/lib/db.ts` | The SQLite database |
 
-`src/plugins/comments/` and a few UI files are shared with WuppyCMS, which offers the same comments as a plugin.
-In the WuppyCMS monorepo they are edited in `../cms/src` and copied here with `pnpm sync`; on its own, this
-repository works as is and the sync step does nothing.
+`src/plugins/comments/` is also the comments plugin of WuppyCMS, which copies it from this repository unchanged
+and only restyles it. So fix and build the comments here.
 
 ```sh
 pnpm dev     # http://localhost:4321
-pnpm check   # types + shared files in sync
+pnpm check   # types
 pnpm test
 ```
